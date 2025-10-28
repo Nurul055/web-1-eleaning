@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Nama Mahasiswa</title>
+    
+    <style>
+        /* CSS untuk styling dengan tema Pink */
+        body {
+            /* Memiliki 1 elemen desain (Warna background: Pink Muda Pastel) */
+            background-color: #fce4ec; /* Light Pink Pastel */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            color: #4a148c; /* Ungu gelap untuk kontras */
+            line-height: 1.6;
+            text-align: center; 
+            padding-bottom: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Konten di kotak putih */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            /* Warna teks untuk heading (Pink Cerah) */
+            color: #d81b60; 
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        button {
+            /* Warna tombol (Pink gelap) */
+            background-color: #ec407a; 
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 25px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #d81b60; /* Pink lebih gelap saat hover */
+        }
+        #output-text {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ff80ab; 
+            padding: 10px;
+            border: 1px solid #ff80ab;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tugas Ai Nurul Hidayah</h1>
+
+        <p>
+           Saya sangat senang belajar koding, karena ia membuka pintu ke dunia kreatifitas tanpa batas, presesnya penuh tantangan tapi hasilnya memuaskan(kalo gak error hehe).
+        </p>
+
+        <p>
+            semangattt.
+        </p>
+
+        <p id="paragraf-akhir">
+            mau jadi syber security
+        </p>
+
+        <hr>
+
+        <button onclick="jalankanInteraksi()">
+            Klik untuk Mengubah Teks!
+        </button>
+        
+        <div id="output-text"></div>
+    </div>
+
+    <script>
+        // Fungsi JS yang dipanggil saat tombol diklik
+        function jalankanInteraksi() {
+            // Mendapatkan tanggal dan waktu saat ini
+            var waktuSekarang = new Date().toLocaleString('id-ID', {
+                day: '2-digit', month: 'short', year: 'numeric', 
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+
+            // 1. Mengubah teks di halaman (Memenuhi syarat interaksi)
+            var elemenParagraf = document.getElementById('paragraf-akhir');
+            elemenParagraf.innerHTML = "<strong>TEKS BERHASIL DIUBAH!</strong> Interaksi JS berhasil dijalankan pada: " + waktuSekarang;
+
+            // 2. Menampilkan tanggal/jam ke halaman (Opsi lain dari syarat interaksi, sebagai bonus)
+            var elemenOutput = document.getElementById('output-text');
+            elemenOutput.textContent = "Waktu Aksi: " + waktuSekarang;
+        }
+    </script>
+
+</body>
+</html>
